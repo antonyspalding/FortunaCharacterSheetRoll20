@@ -19,7 +19,7 @@ tablist.forEach(button => { on(`clicked:${button}`, function() {
   }); 
 });
 
-const defaultbondlist = ["slaves1", "slaves2", "slaves3", "slaves4", "urbanpoor1", "urbanpoor2", "urbanpoor3", "urbanpoor4", "freeborn1", "freeborn2", "freeborn3", "freeborn4", "legio1", "legio2", "legio3", "legio4", "notarius1", "notarius2", "notarius3", "notarius4", "curiales1", "curiales2", "curiales3", "curiales4", "senator1", "senator2", "senator3", "senator4", "virillustris1", "virillustris2", "virillustris3", "virillustris4", "imperial1", "imperial2", "imperial3", "imperial4" ];
+const defaultbondlist = ["slaves1", "slaves2", "slaves3", "slaves4", "urbanpoor1", "urbanpoor2", "urbanpoor3", "urbanpoor4", "freeborn1", "freeborn2", "freeborn3", "freeborn4", "legio1", "legio2", "legio3", "legio4", "notarii1", "notarii2", "notarii3", "notarii4", "curiales1", "curiales2", "curiales3", "curiales4", "senator1", "senator2", "senator3", "senator4", "virillustris1", "virillustris2", "virillustris3", "virillustris4", "imperial1", "imperial2", "imperial3", "imperial4" ];
 on('sheet:opened', function () {
   getAttrs(defaultbondlist, function(values) {
     let slaves1 = parseInt(values.slaves1)||0;
@@ -38,10 +38,10 @@ on('sheet:opened', function () {
     let legio2 = parseInt(values.legio2)||0;
     let legio3 = parseInt(values.legio3)||0;
     let legio4 = parseInt(values.legio4)||0;
-    let notarius1 = parseInt(values.notarius1)||0;
-    let notarius2 = parseInt(values.notarius2)||0;
-    let notarius3 = parseInt(values.notarius3)||0;
-    let notarius4 = parseInt(values.notarius4)||0;
+    let notarii1 = parseInt(values.notarii1)||0;
+    let notarii2 = parseInt(values.notarii2)||0;
+    let notarii3 = parseInt(values.notarii3)||0;
+    let notarii4 = parseInt(values.notarii4)||0;
     let curiales1 = parseInt(values.curiales1)||0;
     let curiales2 = parseInt(values.curiales2)||0;
     let curiales3 = parseInt(values.curiales3)||0;
@@ -75,10 +75,10 @@ on('sheet:opened', function () {
       "legio2": legio2,
       "legio3": legio3,
       "legio4": legio4,
-      "notarius1": notarius1,
-      "notarius2": notarius2,
-      "notarius3": notarius3,
-      "notarius4": notarius4,
+      "notarii1": notarii1,
+      "notarii2": notarii2,
+      "notarii3": notarii3,
+      "notarii4": notarii4,
       "curiales1": curiales1,
       "curiales2": curiales2,
       "curiales3": curiales3,
@@ -155,6 +155,84 @@ on('sheet:opened', function(){
       "religiopagan2": religiopagan2,
       "religiopagan3": religiopagan3,
       "religiopagan4": religiopagan4
+    });
+    console.log("after setting");
+  });
+});
+
+const defaultpathoslist = ["pathos1", "pathos2", "pathos3", "pathos4", "pathos5", "pathos6", "pathos7", "pathos8", "pathos9", "pathos10"];
+on('sheet:opened', function(){
+  console.log("into open");
+  getAttrs(defaultpathoslist, function(values) {
+    console.log("into get");
+    console.log("pathos1 = " + values.pathos1 + "before");
+    let pathos1 = parseInt(values.pathos1)||0;
+    console.log("pathos1 = " + pathos1 + "after");
+    let pathos2 = parseInt(values.pathos2)||0;
+    let pathos3 = parseInt(values.pathos3)||0;
+    let pathos4 = parseInt(values.pathos4)||0;
+    let pathos5 = parseInt(values.pathos5)||0;
+    let pathos6 = parseInt(values.pathos6)||0;
+    let pathos7 = parseInt(values.pathos7)||0;
+    let pathos8 = parseInt(values.pathos8)||0;
+    let pathos9 = parseInt(values.pathos9)||0;
+    let pathos10 = parseInt(values.pathos10)||0;
+    setAttrs({
+      "pathos1": pathos1,
+      "pathos2": pathos2,
+      "pathos3": pathos3,
+      "pathos4": pathos4,
+      "pathos5": pathos5,
+      "pathos6": pathos6,
+      "pathos7": pathos7,
+      "pathos8": pathos8,
+      "pathos9": pathos9,
+      "pathos10": pathos10
+    });
+    console.log("after setting");
+  });
+});
+
+const defaultconditionlist = ["conditionrage", "conditionpeaceful", "conditionreckless", "conditionprudent", "conditionobsessed", "conditionlucid", "conditionparanoid", "conditiontrustful", "conditionanxious", "conditioncalm", "conditionlistless", "conditionactive", "conditiondespair", "conditionhopeful", "conditiondetached", "conditionconnected"];
+on('sheet:opened', function(){
+  console.log("into open");
+  getAttrs(defaultconditionlist, function(values) {
+    console.log("into get");
+    console.log("conditionrage = " + values.conditionrage + "before");
+    let conditionrage = parseInt(values.conditionrage)||0;
+    console.log("conditionrage = " + conditionrage + "after");
+    let conditionpeaceful = parseInt(values.conditionpeaceful)||0;
+    let conditionreckless = parseInt(values.conditionreckless)||0;
+    let conditionprudent = parseInt(values.conditionprudent)||0;
+    let conditionobsessed = parseInt(values.conditionobsessed)||0;
+    let conditionlucid = parseInt(values.conditionlucid)||0;
+    let conditionparanoid= parseInt(values.conditionparanoid)||0;
+    let conditiontrustful = parseInt(values.conditiontrustful)||0;
+    let conditionanxious = parseInt(values.conditionanxious)||0;
+    let conditioncalm = parseInt(values.conditioncalm)||0;
+    let conditionlistless = parseInt(values.conditionlistless)||0;
+    let conditionactive = parseInt(values.conditionactive)||0;
+    let conditiondespair = parseInt(values.conditiondespair)||0;
+    let conditionhopeful = parseInt(values.conditionhopeful)||0;
+    let conditiondetached= parseInt(values.conditiondetached)||0;
+    let conditionconnected = parseInt(values.conditionconnected)||0;
+    setAttrs({
+      "conditionrage": conditionrage,
+      "conditionpeaceful": conditionpeaceful,
+      "conditionreckless": conditionreckless,
+      "conditionprudent": conditionprudent,
+      "conditionobsessed": conditionobsessed,
+      "conditionlucid": conditionlucid,
+      "conditionparanoid": conditionparanoid,
+      "conditiontrustful": conditiontrustful,
+      "conditionanxious": conditionanxious,
+      "conditioncalm": conditioncalm,
+      "conditionlistless": conditionlistless,
+      "conditionactive": conditionactive,
+      "conditiondespair": conditiondespair,
+      "conditionhopeful": conditionhopeful,
+      "conditiondetached": conditiondetached,
+      "conditionconnected": conditionconnected
     });
     console.log("after setting");
   });

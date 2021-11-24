@@ -3,16 +3,16 @@
     { "title": "character_trait_fortitude", "attribute": "fortitude", "image": "Fortitude"}, 
     { "title": "character_trait_perceptio", "attribute": "perceptio", "image": "Perceptio"}, 
     { "title": "character_trait_kharisma", "attribute": "kharisma", "image": "Kharisma"}, 
-    { "title": "character_trait_civitas", "attribute": "civitas", "image": "Civitas"}, 
-    { "title": "character_trait_religio_christian", "attribute": "religiochristian", "image": "Religio_Christian"}, 
-    { "title": "character_trait_religio_pagan", "attribute": "religiopagan", "image": "Religio_Pagan"}
+    { "title": "character_trait_civitas", "attribute": "civitas", "image": "Civitas"},
+    { "title": "character_trait_religio_pagan", "attribute": "religiopagan", "image": "Religio_Pagan"},
+    { "title": "character_trait_religio_christian", "attribute": "religiochristian", "image": "Religio_Christian"}
   ],
   "bondlist": [
     { "title": "character_bond_slaves", "attribute": "slaves", "image": "Bond_Class" }, 
     { "title": "character_bond_urbanpoor", "attribute": "urbanpoor", "image": "Bond_Class"}, 
     { "title": "character_bond_freeborn", "attribute": "freeborn", "image": "Bond_Class"}, 
     { "title": "character_bond_legio", "attribute": "legio", "image": "Bond_Class"}, 
-    { "title": "character_bond_notarius", "attribute": "notarius", "image": "Bond_Class"}, 
+    { "title": "character_bond_notarii", "attribute": "notarii", "image": "Bond_Class"}, 
     { "title": "character_bond_curiales", "attribute": "curiales", "image": "Bond_Class"}, 
     { "title": "character_bond_senator", "attribute": "senator", "image": "Bond_Class"}, 
     { "title": "character_bond_virillustris", "attribute": "virillustris", "image": "Bond_Class"}, 

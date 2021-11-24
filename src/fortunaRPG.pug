@@ -48,18 +48,22 @@ mixin progressbar(attribute, length)
 mixin conditionpair(condition)
   li.conditionpair
     div.condition
-      input(name='attr_condition' + condition.negative.attribute type="checkbox")
+      input(name='attr_condition' + condition.negative.attribute type="radio" value="0")
+      input(name='attr_condition' + condition.negative.attribute type="radio" value="1")
+      input(name='attr_condition' + condition.negative.attribute type="radio" value="2")
       label(data-i18n=condition.negative.title)=translation[condition.negative.title]
     | |
     div.condition
-      input(name='attr_condition' + condition.positive.attribute type="checkbox")
+      input(name='attr_condition' + condition.positive.attribute type="radio" value="0")
+      input(name='attr_condition' + condition.positive.attribute type="radio" value="1")
+      input(name='attr_condition' + condition.positive.attribute type="radio" value="2")
       label(data-i18n=condition.positive.title)=translation[condition.positive.title]
 
 main.main
   input.tabtoggle(type="hidden" name="attr_tab" value="tabcharacter")
   input.playbooktoggle(type="hidden" name="attr_playbook" value="evocatus")
-  section.navigation 
-    .playbook
+  section.navigation.section
+    .navigationplaybook
       | Playbook : 
       each playbook in playbooks
         button(type="action" name='act_' + playbook.code data-i18n=playbook.title)=translation[playbook.title]
@@ -78,9 +82,9 @@ main.main
       section.description.section
         label.heading3(data-i18n='character_name')=translation.character_name
         input(name="attr_name" type="text" spellcheck="false")
-        label.heading3(data-i18n='character_demeanor')=translation.character_demeanor
-        input(name="attr_demeanor1" type="text" spellcheck="false")
-        input(name="attr_demeanor2" type="text" spellcheck="false")
+        label.heading3(data-i18n='character_demeanour')=translation.character_demeanour
+        input(name="attr_demeanour1" type="text" spellcheck="false")
+        input(name="attr_demeanour2" type="text" spellcheck="false")
         label.heading3(data-i18n='character_ambitions')=translation.character_ambitions
         input(name="attr_ambitions1" type="text" spellcheck="false")
         input(name="attr_ambitions2" type="text" spellcheck="false")
@@ -146,29 +150,34 @@ main.main
       section.cohort.section 
         .cohort.evocatus
           span.heading3(data-i18n='character_cohort')=translation["character_cohort"]
-          +progressbar("cohortevocatus", 5)
-          button(type="action" name="act_cohortevocatusempty") 
+          input(name="attr_cohortevocatusname" type="text" spellcheck="false")
+          //- +progressbar("cohortevocatus", 5)
+          //- button(type="action" name="act_cohortevocatusempty") 
           .cohortnotes
             span.heading7(data-i18n='character_cohort_notes')=translation["character_cohort_notes"]
             textarea(name="attr_cohortevocatusnotes")
         .cohort.decurion
           span.heading3(data-i18n='character_cohort')=translation["character_cohort"]
-          +progressbar("cohortdecurion", 5)
-          button(type="action" name="act_cohortdecurionempty") 
+          input(name="attr_cohortdecurionname" type="text" spellcheck="false")
+          //- +progressbar("cohortdecurion", 5)
+          //- button(type="action" name="act_cohortdecurionempty") 
           .cohortnotes
             span.heading7(data-i18n='character_cohort_notes')=translation["character_cohort_notes"]
             textarea(name="attr_cohortdecurionnotes")
         .cohort.agente 
           span.heading3(data-i18n='character_cohort_gang')=translation["character_cohort_gang"]
-          +progressbar("gang", 5)
-          button(type="action" name="act_gangempty") 
+          input(name="attr_cohortagentename" type="text" spellcheck="false")
+          .cohortprogress
+            +progressbar("gang", 5)
+            button(type="action" name="act_gangempty") 
           .cohortnotes
             span.heading7(data-i18n='character_cohort_notes')=translation["character_cohort_notes"]
             textarea(name="attr_cohortagentenotes")
         .cohort.auriga 
           span.heading3(data-i18n='character_cohort_fans')=translation["character_cohort_fans"]
-          +progressbar("fans", 5)
-          button(type="action" name="act_fansempty") 
+          input(name="attr_cohortauriganame" type="text" spellcheck="false")
+          //- +progressbar("fans", 5)
+          //- button(type="action" name="act_fansempty") 
           .cohortnotes
             span.heading7(data-i18n='character_cohort_notes')=translation["character_cohort_notes"]
             textarea(name="attr_cohortauriganotes")
@@ -192,10 +201,7 @@ main.main
         .status.evocatus
           span.heading3(data-i18n='advancement_status_freeborn') #{translation["advancement_status_freeborn"]}
           p(data-i18n='playbook_evocatus_status_part1') #{translation["playbook_evocatus_status_part1"]}
-      section.experience.section 
-        span.heading3(data-i18n='advancement_improvement') #{translation["advancement_improvement"]}
-        p(data-i18n='advancement_improvement_part1') #{translation["advancement_improvement_part1"]}
-        include advancement.pug
+      include advancement.pug
         
           
       section.legacy.section 

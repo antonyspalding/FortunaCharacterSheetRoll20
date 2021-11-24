@@ -1,6 +1,6 @@
 /*---- Temp / Miscellaneous ----*/
 @import url("https://fonts.googleapis.com/css?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
-.main section.navigation .playbook button[name=act_auriga] {
+.main section.navigation .navigationplaybook button[name=act_auriga] {
   display: none;
 }
 .main {
@@ -89,7 +89,7 @@
 .main p {
   font-family: "Crimson Pro";
   font-size: 12pt;
-  line-height: 18px;
+  line-height: 20px;
 }
 .main label {
   font-size: 12pt;
@@ -98,12 +98,13 @@
 .main textarea {
   width: 90%;
   height: 85%;
-  min-height: 200px;
+  min-height: 100px;
 }
 .main .section {
-  padding: 1%;
+  padding: 3%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
+  margin: 0 0 10px 0;
 }
 .main .circleIcon {
   width: 20px;
@@ -291,7 +292,7 @@
   z-index: 1;
   opacity: 0;
   margin-left: -3px;
-  top: 13px;
+  top: 24px;
 }
 .main input[type=radio].progressbar:checked + span.progressbar ~ span.progressbar {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Circle_ProgressBar.svg);
@@ -321,6 +322,7 @@
   vertical-align: text-bottom;
   position: relative;
   top: 1px;
+  margin-left: 7px;
 }
 .main .resilience span.progressbar.threshold {
   position: relative;
@@ -338,10 +340,10 @@
   width: 20px;
   height: 20px;
 }
-.main input.playbooktoggle[value=evocatus] ~ .navigation .playbook button[name=act_evocatus],
-.main input.playbooktoggle[value=decurion] ~ .navigation .playbook button[name=act_decurion],
-.main input.playbooktoggle[value=agente] ~ .navigation .playbook button[name=act_agente],
-.main input.playbooktoggle[value=auriga] ~ .navigation .playbook button[name=act_auriga] {
+.main input.playbooktoggle[value=evocatus] ~ .navigation .navigationplaybook button[name=act_evocatus],
+.main input.playbooktoggle[value=decurion] ~ .navigation .navigationplaybook button[name=act_decurion],
+.main input.playbooktoggle[value=agente] ~ .navigation .navigationplaybook button[name=act_agente],
+.main input.playbooktoggle[value=auriga] ~ .navigation .navigationplaybook button[name=act_auriga] {
   background-color: white;
 }
 .main span.descriptor3.evocatus, .main span.descriptor3.decurion, .main span.descriptor3.agente, .main span.descriptor3.auriga {
@@ -353,26 +355,26 @@
 .main input.playbooktoggle[value=auriga] ~ .tabcharacter .tabcharactermain section.description.section span.descriptor3.auriga {
   display: block;
 }
-.main section.moves label, .main section.moves > input {
+.main section.moves .moveitem, .main section.moves > input {
   display: none;
 }
 .main section.moves.section > input:checked {
-  display: inline-block;
+  display: block;
 }
-.main section.moves.section > input:checked + label {
-  display: inline;
+.main section.moves.section > input:checked + .moveitem {
+  display: block;
 }
 .main input.playbooktoggle[value=evocatus] ~ .tabcharacter .tabcharactermain section.moves.section input.evocatus,
 .main input.playbooktoggle[value=decurion] ~ .tabcharacter .tabcharactermain section.moves.section input.decurion,
 .main input.playbooktoggle[value=agente] ~ .tabcharacter .tabcharactermain section.moves.section input.agente,
 .main input.playbooktoggle[value=auriga] ~ .tabcharacter .tabcharactermain section.moves.section input.auriga {
-  display: inline-block;
+  display: block;
 }
-.main input.playbooktoggle[value=evocatus] ~ .tabcharacter .tabcharactermain section.moves.section label.evocatus,
-.main input.playbooktoggle[value=decurion] ~ .tabcharacter .tabcharactermain section.moves.section label.decurion,
-.main input.playbooktoggle[value=agente] ~ .tabcharacter .tabcharactermain section.moves.section label.agente,
-.main input.playbooktoggle[value=auriga] ~ .tabcharacter .tabcharactermain section.moves.section label.auriga {
-  display: inline;
+.main input.playbooktoggle[value=evocatus] ~ .tabcharacter .tabcharactermain section.moves.section .moveitem.evocatus,
+.main input.playbooktoggle[value=decurion] ~ .tabcharacter .tabcharactermain section.moves.section .moveitem.decurion,
+.main input.playbooktoggle[value=agente] ~ .tabcharacter .tabcharactermain section.moves.section .moveitem.agente,
+.main input.playbooktoggle[value=auriga] ~ .tabcharacter .tabcharactermain section.moves.section .moveitem.auriga {
+  display: block;
 }
 .main .cohort.evocatus, .main .cohort.decurion, .main .cohort.agente, .main .cohort.auriga {
   display: none;
@@ -390,6 +392,15 @@
 .main input.playbooktoggle[value=decurion] ~ .tabadvancement .tabadvancementmain section .status.decurion,
 .main input.playbooktoggle[value=agente] ~ .tabadvancement .tabadvancementmain section .status.agente,
 .main input.playbooktoggle[value=auriga] ~ .tabadvancement .tabadvancementmain section .status.auriga {
+  display: block;
+}
+.main .cohortadvancement.agente, .main .cohortadvancement.auriga, .main .cohortadvancement.decurion, .main .cohortadvancement.evocatus {
+  display: none;
+}
+.main input.playbooktoggle[value=evocatus] ~ .tabadvancement .tabadvancementmain section .cohortadvancement.evocatus,
+.main input.playbooktoggle[value=decurion] ~ .tabadvancement .tabadvancementmain section .cohortadvancement.decurion,
+.main input.playbooktoggle[value=agente] ~ .tabadvancement .tabadvancementmain section .cohortadvancement.agente,
+.main input.playbooktoggle[value=auriga] ~ .tabadvancement .tabadvancementmain section .cohortadvancement.auriga {
   display: block;
 }
 .main .experience.agente, .main .experience.auriga, .main .experience.decurion, .main .experience.evocatus {
@@ -418,7 +429,7 @@
   display: inline;
 }
 .main .intro.agente, .main .intro.auriga, .main .intro.decurion, .main .intro.evocatus, .main .image.agente, .main .image.auriga, .main .image.decurion, .main .image.evocatus,
-.main .creatingnames.agente, .main .creatingnames.auriga, .main .creatingnames.decurion, .main .creatingnames.evocatus, .main .creatingdemeanor.agente, .main .creatingdemeanor.auriga, .main .creatingdemeanor.decurion, .main .creatingdemeanor.evocatus,
+.main .creatingnames.agente, .main .creatingnames.auriga, .main .creatingnames.decurion, .main .creatingnames.evocatus, .main .creatingdemeanour.agente, .main .creatingdemeanour.auriga, .main .creatingdemeanour.decurion, .main .creatingdemeanour.evocatus,
 .main .creatingtraitsandbonds.agente, .main .creatingtraitsandbonds.auriga, .main .creatingtraitsandbonds.decurion, .main .creatingtraitsandbonds.evocatus, .main .creatingmovesandcohort.agente, .main .creatingmovesandcohort.auriga, .main .creatingmovesandcohort.decurion, .main .creatingmovesandcohort.evocatus,
 .main .creatingambitions.agente, .main .creatingambitions.auriga, .main .creatingambitions.decurion, .main .creatingambitions.evocatus, .main .creatingreputation.agente, .main .creatingreputation.auriga, .main .creatingreputation.decurion, .main .creatingreputation.evocatus,
 .main .creatingpersonalties.agente, .main .creatingpersonalties.auriga, .main .creatingpersonalties.decurion, .main .creatingpersonalties.evocatus, .main .creatingfamilia.agente, .main .creatingfamilia.auriga, .main .creatingfamilia.decurion, .main .creatingfamilia.evocatus {
@@ -428,10 +439,10 @@
 .main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .intro.decurion, .main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .image.decurion,
 .main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .intro.agente, .main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .image.agente,
 .main input.playbooktoggle[value=auriga] ~ .tabplaybook .tabplaybookmain section .intro.auriga, .main input.playbooktoggle[value=auriga] ~ .tabplaybook .tabplaybookmain section .image.auriga,
-.main input.playbooktoggle[value=evocatus] ~ .tabplaybook .tabplaybookmain section .creatingnames.evocatus, .main input.playbooktoggle[value=evocatus] ~ .tabplaybook .tabplaybookmain section .creatingdemeanor.evocatus,
-.main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .creatingnames.decurion, .main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .creatingdemeanor.decurion,
-.main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .creatingnames.agente, .main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .creatingdemeanor.agente,
-.main input.playbooktoggle[value=auriga] ~ .tabplaybook .tabplaybookmain section .creatingnames.auriga, .main input.playbooktoggle[value=auriga] ~ .tabplaybook .tabplaybookmain section .creatingdemeanor.auriga,
+.main input.playbooktoggle[value=evocatus] ~ .tabplaybook .tabplaybookmain section .creatingnames.evocatus, .main input.playbooktoggle[value=evocatus] ~ .tabplaybook .tabplaybookmain section .creatingdemeanour.evocatus,
+.main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .creatingnames.decurion, .main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .creatingdemeanour.decurion,
+.main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .creatingnames.agente, .main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .creatingdemeanour.agente,
+.main input.playbooktoggle[value=auriga] ~ .tabplaybook .tabplaybookmain section .creatingnames.auriga, .main input.playbooktoggle[value=auriga] ~ .tabplaybook .tabplaybookmain section .creatingdemeanour.auriga,
 .main input.playbooktoggle[value=evocatus] ~ .tabplaybook .tabplaybookmain section .creatingtraitsandbonds.evocatus, .main input.playbooktoggle[value=evocatus] ~ .tabplaybook .tabplaybookmain section .creatingmovesandcohort.evocatus,
 .main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .creatingtraitsandbonds.decurion, .main input.playbooktoggle[value=decurion] ~ .tabplaybook .tabplaybookmain section .creatingmovesandcohort.decurion,
 .main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .creatingtraitsandbonds.agente, .main input.playbooktoggle[value=agente] ~ .tabplaybook .tabplaybookmain section .creatingmovesandcohort.agente,
@@ -461,11 +472,24 @@
 .main input.tabtoggle[value=tabplaybook] ~ .navigation .tabs .tab button[name=act_tabplaybook] {
   background-color: white;
 }
+.main .navigation .navigationplaybook, .main .navigation .tabs {
+  padding: 0 0 5px 0;
+}
+.main .navigation .navigationplaybook button, .main .navigation .tabs button {
+  margin: 3px 0;
+  text-transform: capitalize;
+}
 .main .header {
   margin-bottom: 10px;
 }
 .main .description {
   grid-area: description;
+}
+.main .description label:first-of-type {
+  margin-top: 0;
+}
+.main .description label {
+  margin: 35px 0 5px 0;
 }
 .main .description input[type=text] {
   font-size: 12pt;
@@ -474,7 +498,7 @@
   border: 0;
   border-bottom: 1px solid gray;
   border-radius: 0;
-  margin-bottom: 28px;
+  margin-bottom: 5px;
 }
 .main .description input[type=text]:focus-visible {
   outline: 0;
@@ -486,37 +510,84 @@
 }
 .main .moves {
   grid-area: moves;
-  line-height: 18px;
+  line-height: 20px;
 }
 .main .moves span.heading3 {
   display: block;
+  margin-bottom: 5px;
+}
+.main .moves .moveitem {
+  margin-top: -22px;
+}
+.main .moves .moveitem label {
+  display: inline;
 }
 .main .moves input.move {
   opacity: 0;
   width: 20px;
   height: 20px;
   margin-right: 0px;
+  margin-top: 20px;
 }
-.main .moves input.move:checked + label > span.movecheck {
+.main .moves input.move:checked + .moveitem > label > span.movecheck {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Enduring.svg);
 }
 .main .moves label span.movecheck {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-left: -23px;
-  margin-bottom: -7px;
+  vertical-align: text-bottom;
+  margin-bottom: -2px;
   margin-right: 5px;
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Circle.svg);
 }
 .main .moves img.circleIcon {
-  margin: 0 5px;
+  margin: 0 5px -2px 5px;
+}
+.main .moves input.agente2custom {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  font-size: 12pt;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid gray;
+  margin: 5px 0;
 }
 .main .traits {
   grid-area: traits;
+  padding-bottom: 20px;
+}
+.main .traits span.heading6 + label:first-of-type {
+  margin-top: 6px;
+}
+.main .traits .circleIcon {
+  margin-bottom: -2px;
+}
+.main .traits label {
+  margin-bottom: -2px;
+  margin-top: 6px;
+}
+.main .traits span.descriptor1 {
+  margin-left: 6px;
 }
 .main .bonds {
   grid-area: bonds;
+  padding-bottom: 20px;
+}
+.main .bonds .circleIcon {
+  margin-bottom: -2px;
+}
+.main .bonds label {
+  margin-bottom: -2px;
+  margin-top: 6px;
+}
+.main .bonds span.descriptor1 {
+  margin-left: 6px;
+}
+.main .bonds .repcontrol {
+  margin-top: 20px;
 }
 .main .improvement {
   grid-area: improvement;
@@ -537,51 +608,164 @@
   grid-area: cohort;
   position: relative;
 }
-.main .conditionpair {
-  grid-area: conditions;
-  display: inline;
-  margin-right: 20px;
+.main .cohort input[type=text] {
+  font-size: 12pt;
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+  margin-bottom: 5px;
 }
-.main .conditionpair .condition {
+.main .cohort input[type=text]:focus-visible {
+  outline: 0;
+}
+.main .cohort input[type=text].personalties {
+  width: 150px;
+  display: inline;
+  vertical-align: baseline;
+}
+.main .cohort .cohortprogress {
+  position: relative;
+  margin: 20px 0 15px 0;
+}
+.main .cohort .cohortprogress input[type=radio].progressbar {
+  top: 1px;
+}
+.main .cohort .cohortprogress input[type=radio].progressbar.progressbarempty {
+  width: 0;
+}
+.main .cohort .cohortprogress span.progressbar.progressbarempty {
+  width: 0;
+}
+.main .cohort .cohortnotes {
+  margin-top: 15px;
+}
+.main .cohort .cohortnotes span.heading7 {
+  display: block;
+}
+.main .conditionwrap {
+  display: inline-block;
+  width: 36%;
+}
+.main .conditionwrap:nth-child(odd) {
+  text-align: right;
+}
+.main .conditionwrap:nth-child(even) {
+  text-align: left;
+}
+.main .conditions span.heading3 {
+  margin-bottom: 15px;
+  display: block;
+}
+.main .conditions ul {
+  margin: 0;
+}
+.main .conditions .conditionpair {
+  grid-area: conditions;
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+}
+.main .conditions .conditionpair .condition:nth-child(odd) label {
+  text-align: right;
+}
+.main .conditions .conditionpair .condition:nth-child(even) label {
+  text-align: left;
+}
+.main .conditions .conditionpair .condition {
   display: inline-block;
   position: relative;
+  margin: 0 15px 0 10px;
 }
-.main .conditionpair .condition input[type=checkbox] {
+.main .conditions .conditionpair .condition label {
+  margin: 0;
+  padding: 0;
+}
+.main .conditions .conditionpair .condition input[type=checkbox], .main .conditions .conditionpair .condition input[type=radio] {
   position: absolute;
   height: 100%;
   width: 100%;
   opacity: 0;
+  left: 0;
 }
-.main .conditionpair .condition input[type=checkbox]:checked + label {
+.main .conditions .conditionpair .condition input[value="0"] {
+  z-index: 3;
+}
+.main .conditions .conditionpair .condition input[value="1"], .main .conditions .conditionpair .condition input[value="2"] {
+  z-index: 2;
+}
+.main .conditions .conditionpair .condition input[value="0"]:checked ~ input[value="1"] {
+  z-index: 5;
+}
+.main .conditions .conditionpair .condition input[value="1"]:checked ~ input[value="2"] {
+  z-index: 5;
+}
+.main .conditions .conditionpair .condition input[value="1"]:checked ~ label {
   color: red;
 }
-.main .experience input.stackcheckbox {
+.main .conditions .conditionpair .condition input[value="2"]:checked ~ label {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+.main .tabadvancementmain {
+  line-height: 23px;
+}
+.main .tabadvancementmain p {
+  line-height: 23px;
+}
+.main .tabadvancementmain .section {
+  margin-bottom: 10px;
+}
+.main .tabadvancementmain .status span.heading3, .main .tabadvancementmain .cohortadvancement span.heading3, .main .tabadvancementmain .experience span.heading3, .main .tabadvancementmain .legacy span.heading3 {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.main .tabadvancementmain .status span.heading7, .main .tabadvancementmain .cohortadvancement span.heading7, .main .tabadvancementmain .experience span.heading7, .main .tabadvancementmain .legacy span.heading7 {
+  display: inline-block;
+  margin: 20px 0 5px 0;
+}
+.main .tabadvancementmain .status span.highlight4, .main .tabadvancementmain .cohortadvancement span.highlight4, .main .tabadvancementmain .experience span.highlight4, .main .tabadvancementmain .legacy span.highlight4 {
+  display: inline-block;
+  margin-top: 10px;
+}
+.main .tabadvancementmain .cohortadvancement .cohortadvancementline, .main .tabadvancementmain .experience .cohortadvancementline {
+  line-height: 27px;
+}
+.main .tabadvancementmain .cohortadvancement input.stackcheckbox, .main .tabadvancementmain .experience input.stackcheckbox {
   height: 20px;
   width: 20px;
   opacity: 0;
 }
-.main .experience input.stackcheckbox + span.stackcheckbox {
+.main .tabadvancementmain .cohortadvancement input.stackcheckbox + span.stackcheckbox, .main .tabadvancementmain .experience input.stackcheckbox + span.stackcheckbox {
   height: 20px;
   width: 20px;
   display: inline-block;
-  margin-left: -20px;
-  margin-bottom: -7px;
+  margin: 0 7px -7px -20px;
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Circle.svg);
 }
-.main .experience input.stackcheckbox:checked + span.stackcheckbox {
+.main .tabadvancementmain .cohortadvancement input.stackcheckbox:checked + span.stackcheckbox, .main .tabadvancementmain .experience input.stackcheckbox:checked + span.stackcheckbox {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Enduring.svg);
 }
-.main .experience input.stackcheckbox .experiencelabel {
-  margin-left: 10px;
+.main .tabadvancementmain .experience .experienceline {
+  line-height: 27px;
 }
-.main .legacy span.heading3 {
-  display: block;
+.main .tabadvancementmain .experience .experienceline input.stackcheckbox + span.stackcheckbox {
+  margin: 0 4px -7px -20px;
 }
-.main .legacytext {
+.main .tabadvancementmain .experience .experienceline .experiencelabel {
   display: inline;
+  margin-left: 3px;
+}
+.main .tabadvancementmain .legacy span.heading3 {
+  display: block;
 }
 .main .tabplaybook .tabplaybookmain span.heading3, .main .tabplaybook .tabplaybookmain span.heading7 {
   display: block;
+}
+.main .tabplaybook .tabplaybookmain span.heading7 {
+  margin: 0 0 5px 0;
 }
 .main .notes {
   grid-area: notes;
@@ -592,18 +776,28 @@
     /*------------- Section-specific CSS -------------*/
   }
   .main .tabcharactermain {
-    margin-bottom: 75px;
+    margin-bottom: 10px;
     display: grid;
-    grid-gap: 1%;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 530px 50px 50px 300px;
+    grid-template-rows: 1fr 530px 90px 90px 300px;
     grid-template-areas: "description   moves" "traits   bonds" "improvement   resilience" "pathos trauma" "cohort conditions";
   }
   .main .section {
     width: auto;
+    margin-bottom: 0;
+  }
+  .main .navigation, .main .header, .main .notes, .main .image, .main .intro, .main .creatingnames, .main .creatingdemeanour, .main .creatingtraitsandbonds, .main .creatingmovesandcohort, .main .creatingambitions,
+.main .creatingreputation, .main .creatingpersonalties, .main .creatingfamilia {
+    margin-bottom: 10px;
   }
   .main .notes textarea {
     width: 98%;
     height: 85%;
+  }
+}
+@media only screen and (min-width: 905px) {
+  .main .tabcharactermain {
+    grid-template-rows: 1fr 530px 70px 70px 300px;
   }
 }
