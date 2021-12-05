@@ -254,7 +254,7 @@ $circleheight: 20px;
       width: $circlewidth*1.5;
     }
     /*---- Thresholds need different images ----*/
-    label:nth-child(5).threestackradio, label:nth-child(9).threestackradio {
+    label:nth-child(7).threestackradio {
       background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Circle_Threshold_ProgressBar.svg);
       background-size: $circlewidth*1.5 $circleheight;
       position: relative;
