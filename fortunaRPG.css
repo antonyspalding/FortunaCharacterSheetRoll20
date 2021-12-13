@@ -212,29 +212,29 @@
 .main .pathos img.circleIcon.threestackradio {
   width: 30px;
 }
-.main .pathos label:nth-child(5).threestackradio, .main .pathos label:nth-child(9).threestackradio {
+.main .pathos label:nth-child(7).threestackradio {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Circle_Threshold_ProgressBar.svg);
   background-size: 30px 20px;
   position: relative;
   top: 3px;
   left: 0px;
 }
-.main .pathos label:nth-child(5).threestackradio img, .main .pathos label:nth-child(9).threestackradio img {
+.main .pathos label:nth-child(7).threestackradio img {
   display: none;
 }
-.main .pathos label:nth-child(5).threestackradio input[type=radio].threestackradio, .main .pathos label:nth-child(9).threestackradio input[type=radio].threestackradio {
+.main .pathos label:nth-child(7).threestackradio input[type=radio].threestackradio {
   top: 0;
 }
-.main .pathos label:nth-child(5).threestackradio input[type=radio].threestackradio + span, .main .pathos label:nth-child(9).threestackradio input[type=radio].threestackradio + span {
+.main .pathos label:nth-child(7).threestackradio input[type=radio].threestackradio + span {
   top: 0;
 }
-.main .pathos label:nth-child(5).threestackradio input[value="1"].threestackradio + span, .main .pathos label:nth-child(9).threestackradio input[value="1"].threestackradio + span {
+.main .pathos label:nth-child(7).threestackradio input[value="1"].threestackradio + span {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Fleeting_Threshold_ProgressBar.svg);
 }
-.main .pathos label:nth-child(5).threestackradio input[value="2"].threestackradio + span, .main .pathos label:nth-child(9).threestackradio input[value="2"].threestackradio + span {
+.main .pathos label:nth-child(7).threestackradio input[value="2"].threestackradio + span {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Enduring_Threshold_ProgressBar.svg);
 }
-.main .pathos label:nth-child(5).threestackradio input[value="0"].threestackradio + span, .main .pathos label:nth-child(9).threestackradio input[value="0"].threestackradio + span {
+.main .pathos label:nth-child(7).threestackradio input[value="0"].threestackradio + span {
   background-image: url(https://imgsrv.roll20.net?src=https%3A//raw.githubusercontent.com/antonyspalding/FortunaCharacterSheetRoll20/main/images/Circle_Threshold_ProgressBar.svg);
 }
 .main .pathos label:last-of-type.threestackradio {

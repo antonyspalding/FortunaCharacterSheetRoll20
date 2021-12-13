@@ -39,9 +39,9 @@ mixin progressbar(attribute, length)
     if attribute=="resilience" && progressbarcounter==4
       span.progressbar.threshold
         img.circleIcon(src=imagesrc + "Resilience_Threshold_ProgressBar.svg")
-    else if attribute=="resilience" && progressbarcounter==6
-      span.progressbar.thresholdfinal
-        img.circleIcon(src=imagesrc + "Resilience_Threshold.svg")
+    //-else if attribute=="resilience" && progressbarcounter==6
+    //-  span.progressbar.thresholdfinal
+    //-    img.circleIcon(src=imagesrc + "Resilience_Threshold.svg")
     else 
       span.progressbar
 
@@ -125,7 +125,7 @@ main.main
           input(name="attr_custombondtitle" type="text" spellcheck="false")
       section.improvement.section 
         span.heading4(data-i18n='character_improvement')=translation["character_improvement"]
-        +progressbar("improvement", 7)
+        +progressbar("improvement", 9)
         button(type="action" name="act_improvementempty") 
       section.resilience.section 
         span.heading5(data-i18n='character_resilience')=translation["character_resilience"]
